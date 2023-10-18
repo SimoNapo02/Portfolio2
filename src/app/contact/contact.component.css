@@ -1,0 +1,81 @@
+.contact{
+    max-width: 800px;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: poppins;
+}
+
+.page{
+    width: fit-content;
+    padding: 8px 12px 8px 12px;
+    color: #a2a2a2;
+}
+
+.page a{
+    text-decoration: none;
+}
+::placeholder {
+    color: #a2a2a2; 
+  }
+
+  .coloring{
+    color: #EB4A4C;
+}
+.bg-darker{
+    background-color: #222;
+}
+h3{
+    border-bottom: 1px solid #222;
+    border-bottom-style: dashed;
+    margin-bottom: 100px;
+    font-weight: bolder;
+}
+
+.send-message{
+    width: 180px;
+    font-family: poppins;
+    font-size: 16px;
+    background-color: #EB4A4C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.send-message:hover{
+    background-color: white;
+    color: black;
+    transition: 0.1s;
+}
+.message{
+    height: 100px;
+    padding: 20px;
+}
+.form-control.is-invalid{
+    border: 1px solid #EB4A4C;
+  }
+
+  .form-control{
+    color: white;
+    border-color: transparent;
+    font-size: 14px;
+    padding: 10px 16px 10px 16px;
+    box-shadow: none;
+  }
+
+  
+
+  .info, .info-form{
+    width: 100%;
+    padding: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}

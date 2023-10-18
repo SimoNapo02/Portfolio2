@@ -1,0 +1,19 @@
+
+
+  .cursor {
+    width: calc(24px + 8px);
+    height: calc(24px + 8px);
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #EB4A45;
+    z-index: 999;
+  }
+
+  .cursor::after{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #eb4b455f;
+  }
+  
