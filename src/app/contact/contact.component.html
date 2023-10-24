@@ -27,11 +27,35 @@
                     <div class="form-group my-3">
                         <textarea formControlName="body" id="body" type="text" placeholder="Message" class="form-control bg-darker message" [ngClass]="getFormControlClass('body')"></textarea>
                     </div>
-                    <button class="btn btn-primary send-message" type="submit">Send Message</button>
+                    <button class="btn btn-primary send-message" [disabled]="form.invalid" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Send Message</button>
                 </div>
             </form>
             <div *ngIf="form.invalid && submitted" class="ps-2 mt-2 text-white-50">
                 Please fill in all required fields correctly.
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn close-button border border-white my-3 mx-3" data-bs-dismiss="modal" aria-label="Close" >
+                        <i class="bi bi-x-lg" style="color: white;"></i>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="showModal">
+                    <div class="container">
+                        <p><strong>Name:</strong> {{ form.value.name }}</p>
+                        <p><strong>Email:</strong> {{ form.value.email }}</p>
+                        <p><strong>Message:</strong> {{ form.value.body }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

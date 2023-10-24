@@ -7,12 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MouseFollowerComponent } from './mouse-follower/mouse-follower.component';
 import { BackgroundComponent } from './background/background.component';
-
+import { PreventivoComponent } from './preventivo/preventivo.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,17 +23,22 @@ import { BackgroundComponent } from './background/background.component';
     HomeComponent,
     AboutComponent,
     PortfolioComponent,
-    ProjectsComponent,
     ContactComponent,
     MouseFollowerComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    PreventivoComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,75 @@
+<form class="text-white" (ngSubmit)="onSubmit()">
+    <!-- Name and Surname inputs -->
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name">
+    </div>
+    <div>
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" [(ngModel)]="surname">
+    </div>
+  
+    <!--  Domain choice -->
+    <div>
+      <label for="wantDomain">Do you want a domain?</label>
+      <input type="radio" name="wantDomain" [(ngModel)]="wantDomain" value="true"> Yes
+      <input type="radio" name="wantDomain" [(ngModel)]="wantDomain" value="false"> No
+    </div>
+  
+    <!-- Domain input -->
+    <div *ngIf="wantDomain === 'true'">
+      <label for="enteredDomain">Enter your domain:</label>
+      <input type="text" id="enteredDomain" name="enteredDomain" [(ngModel)]="enteredDomain">
+    </div>
+  
+    <!-- Service dropdown -->
+    <div>
+      <label for="selectedService">Select a service:</label>
+      <select id="selectedService" name="selectedService" [(ngModel)]="selectedService">
+        <option value="static">Static</option>
+        <option value="cms">CMS</option>
+        <option value="e-shop">E-shop</option>
+        <option value="gestionale">Gestionale</option>
+        <option value="i-o-t">I-O-T</option>
+      </select>
+    </div>
+  
+    <!-- Payment checkboxes -->
+    <div *ngIf="selectedService === 'e-shop'">
+      <label>Choose payment types:</label>
+      <input type="checkbox" name="creditCard" [(ngModel)]="paymentTypes.creditCard"> Credit Card
+      <input type="checkbox" name="paypal" [(ngModel)]="paymentTypes.paypal"> PayPal
+      <input type="checkbox" name="bankTransfer" [(ngModel)]="paymentTypes.bankTransfer"> Bank Transfer
+    </div>
+  
+    <!-- Calendar -->
+    <div>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Delivery Date" name="deliveryDate" [(ngModel)]="deliveryDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  
+    <!-- Bundles -->
+    <div>
+      <label>Maintenance Bundle:</label>
+      <div>
+        <input type="radio" name="maintenanceBundle" [(ngModel)]="maintenanceBundle" value="3 months"> 3 months
+        <input type="radio" name="maintenanceBundle" [(ngModel)]="maintenanceBundle" value="6 months"> 6 months
+        <input type="radio" name="maintenanceBundle" [(ngModel)]="maintenanceBundle" value="1 year"> 1 year
+      </div>
+    </div>
+  
+    <!--  full price button -->
+    <button mat-raised-button color="primary" (click)="calculateFullPrice()">Calculate Full Price</button>
+  
+    <!-- Display  full price -->
+    <div *ngIf="fullPrice > 0">
+      <p>Full Price: ${{ fullPrice }}</p>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+  </form>
+  
