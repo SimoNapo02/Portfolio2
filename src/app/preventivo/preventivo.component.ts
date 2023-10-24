@@ -11,7 +11,7 @@ export class PreventivoComponent {
   wantDomain: string = 'false';
   enteredDomain: string = '';
   domainPrice: number = 15;
-  invalidDomains: string[] = ['example.com', 'yourdomain.com', 'mydomain.net'];
+  invalidDomains: string[] = ['example.com', 'domain.com', 'Exampledomain.net'];
   selectedService: string = '';
   paymentTypes = { creditCard: false, paypal: false, bankTransfer: false };
   deliveryDate: Date;

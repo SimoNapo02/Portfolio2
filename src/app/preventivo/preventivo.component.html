@@ -20,6 +20,9 @@
     <div *ngIf="wantDomain === 'true'">
       <label for="enteredDomain">Enter your domain:</label>
       <input type="text" id="enteredDomain" name="enteredDomain" [(ngModel)]="enteredDomain">
+      <span *ngIf="enteredDomain && isInvalidDomain(enteredDomain)" class="error">
+        Invalid domain. Please enter a different domain.
+      </span>
     </div>
   
     <!-- Service dropdown -->
@@ -66,7 +69,7 @@
   
     <!-- Display  full price -->
     <div *ngIf="fullPrice > 0">
-      <p>Full Price: ${{ fullPrice }}</p>
+      <p>Full Price: €{{ fullPrice }}</p>
     </div>
   
     <!-- Submit button -->
