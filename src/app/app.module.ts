@@ -15,7 +15,10 @@ import { PreventivoComponent } from './preventivo/preventivo.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagamentiComponent } from './pagamenti/pagamenti.component'
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     ContactComponent,
     MouseFollowerComponent,
     BackgroundComponent,
-    PreventivoComponent
+    PreventivoComponent,
+    PagamentiComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     NgbModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
-    
+    MatNativeDateModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

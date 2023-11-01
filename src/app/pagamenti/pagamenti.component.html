@@ -1,0 +1,14 @@
+<div class="container cards text-white">
+
+
+
+  
+  <div *ngFor="let card of creditCards">
+    <div>
+      <h3>{{ card.type }}</h3>
+      <p>Card Number: {{ card.number }}</p>
+      <p>Expiration: {{ card.expiration }}</p>
+      <p>Owner: {{ card.owner }}</p>
+    </div>
+  </div>
+</div>

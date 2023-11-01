@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { PreventivoComponent } from './preventivo/preventivo.component';
+import { PagamentiComponent } from './pagamenti/pagamenti.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent }, 
   { path: 'contact', component: ContactComponent },
   { path: 'preventivo', component: PreventivoComponent },
+  { path: 'pagamenti', component: PagamentiComponent },
 
 ];
 
